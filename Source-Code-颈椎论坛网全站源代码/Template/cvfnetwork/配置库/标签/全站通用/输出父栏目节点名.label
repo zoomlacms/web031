@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>750</LabelID>
+    <LabelName>输出父栏目节点名</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,1,1,父节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>ParentID=@ParentID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>
+{Repeate}
+&lt;li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding5"&gt;
+  &lt;div class="pcolumn_li"&gt;
+  &lt;div class="pcolumn_div"&gt;&lt;span&gt;{Field="NodeName"/}&lt;/span&gt;&lt;a href="{ZL:GetNodeLinkUrl({Field="NodeID"/})/}" target="_blank" class="pull-right"&gt;更多&gt;&gt;&lt;/a&gt;&lt;/div&gt;
+{ZL.Label id="输出子栏目文章标题_无分页" NodeID="{Field="NodeID"/}" ShowNum="10" TitleNum="40" /}
+  &lt;div class="clearfix"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}
+</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

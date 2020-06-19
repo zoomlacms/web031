@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="API_ShopSource, App_Web_rgtcquqg" enableviewstatemac="false" enableEventValidation="false" viewStateEncryptionMode="Never" %>

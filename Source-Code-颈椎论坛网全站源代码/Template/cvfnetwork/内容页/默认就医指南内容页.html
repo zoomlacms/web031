@@ -1,0 +1,75 @@
+﻿{ZL.Source id="就医指南数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="就医指南数据源标签" FD="Title" page="0"/}</title>
+<link href="/skin/style.css" rel="stylesheet" type="text/css" />
+<meta name="Keywords" content="{SField sid="就医指南数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/} 
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="container">  
+<div class="hospital">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 hospital_l">
+<div class="mysite">
+<ol class="breadcrumb" id="breadcrumb">
+<li>您的位置：<a href="/">首页</a> >> </li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="就医指南数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="根据节点ID输出指定节点名" NodeID="{SField sid="就医指南数据源标签" FD="NodeID" page="0"/}" /}</a> >> </li>
+<li>{SField sid="就医指南数据源标签" FD="Title" page="0"/}</li>
+</ol>
+</div>
+<div class="hospital_info">
+<div class="hospital_title">基本信息</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+<img src="{ZL:GetPicUrl({SField sid="就医指南数据源标签" FD="Pic" page="0"/})/}" class="center-block img-responsive" alt="{SField sid="就医指南数据源标签" FD="Title" page="0"/}">
+</div>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+<h1>{SField sid="就医指南数据源标签" FD="Title" page="0"/}</h1>
+<div class="hospital_syn">{SField sid="就医指南数据源标签" FD="Syn" page="0"/}</div>
+</div>
+<div class="clearfix"></div>
+<div class="hospital_title">医院介绍</div>
+<div class="hospital_content">
+{SField sid="就医指南数据源标签" FD="Content" page="0"/}
+</div>
+
+<div class="doctors">
+<div class="hospital_title">询问医生</div>
+<ul class="list-unstyled">
+{ZL.Label id="抽取指定医院的医生" GeneralID="196" /}
+</ul>
+<div class="clearfix"></div>
+</div>
+
+<div class="hospital_title">联系我们</div>
+<div class="hospital_contact">
+<p>
+电话：{SField sid="就医指南数据源标签" FD="Tel" page="0"/}<br/>
+地址：{SField sid="就医指南数据源标签" FD="Address" page="0"/}
+</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hospital_r">
+<div class="pcolumn_r_recovery">
+<p class="pcolumn_r_recovery_p">精彩图片</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出推荐文章图片标题_无分页" NodeID="4" ShowNum="4" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div> 
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+$().ready(function(e) {
+    var doc='{ZL.Label id="抽取指定医院的医生" GeneralID="196" /}';
+});
+</script>

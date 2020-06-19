@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>777</LabelID>
+    <LabelName>输出指定年龄地区症状部位帖子总数</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>贴吧专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>Area,,1,地区|KeyWord,,1,症状|CateID,0,1,版块|MaxA,200,1,最大年纪|MinA,0,1,最小年纪</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Guest_Bar</LabelTable>
+    <LabelField>Count (*) As Num</LabelField>
+    <LabelWhere>Pid=0 And CateID=@CateID And Title like '%@KeyWord%' And CUser in (select ZL_User.UserID from ZL_User left join ZL_UserBase on ZL_User.UserID=ZL_UserBase.UserID where Province='@Area' And birthday&gt;dateadd(year,-@MaxA,getdate()) and birthday&lt;dateadd(year,-@MinA,getdate())) And Status=1</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,195 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="/App_Themes/Guest/bar.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+.home_logo .navbar-default .navbar-nav > .home_ba{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} > a{background:#fff;color:#719cc8;}
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/} 
+<div class="container">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 search_l">
+<ol class="breadcrumb" id="breadcrumb">
+<li>您的位置：<a href="/">首页</a>>></li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ol>
+<div class="search_lt">
+<div class="row">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 search_ltl">地区：</div>
+<div class="col-lg-11 col-md-11 col-sm-11 col-xs-12 search_lt">
+<ul class="list-unstyled" id="area_ul">
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area=&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">全部</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(北京)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">北京</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(天津)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">天津</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(上海)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">上海</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(重庆)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">重庆</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(河北省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">河北省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(山西省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">山西省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(辽宁省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">辽宁省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(吉林省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">吉林省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(黑龙江省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">黑龙江省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(江苏省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">江苏省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(浙江省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">浙江省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(安徽省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">安徽省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(福建省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">福建省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(江西省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">江西省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(山东省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">山东省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(河南省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">河南省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(湖北省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">湖北省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(湖南省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">湖南省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(广东省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">广东省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(海南省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">海南省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(四川省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">四川省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(贵州省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">贵州省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(云南省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">云南省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(陕西省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">陕西省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(甘肃省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">甘肃省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(青海省)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">青海省</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(内蒙古)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">内蒙古</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(广西)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">广西</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(西藏)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">西藏</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(宁夏)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">宁夏</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetUrlencode(新疆)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">新疆</a></li>
+</ul>
+</div>
+</div>
+<div class="row margin_top20">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 search_ltl">症状：</div>
+<div class="col-lg-11 col-md-11 col-sm-11 col-xs-12 search_lt">
+<ul class="list-unstyled" id="key_ul">
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord=&CateID={$GetRequest(CateID)$}">全部</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetUrlencode(头晕)$}&CateID={$GetRequest(CateID)$}">头晕</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetUrlencode(疼痛)$}&CateID={$GetRequest(CateID)$}">疼痛</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetUrlencode(手麻)$}&CateID={$GetRequest(CateID)$}">手麻</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetUrlencode(迟滞)$}&CateID={$GetRequest(CateID)$}">迟滞</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetUrlencode(流口水)$}&CateID={$GetRequest(CateID)$}">流口水</a></li>
+<div class="cearfix"></div>
+</ul>
+</div>
+</div>
+<div class="row margin_top20">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 search_ltl">部位：</div>
+<div class="col-lg-11 col-md-11 col-sm-11 col-xs-12 search_lt">
+<ul class="list-unstyled" id="cate_ul">
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID=">全部</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID=4">颈椎</a></li>
+<li><a href="?MinA={$GetRequest(MinA)$}&MaxA={$GetRequest(MaxA)$}&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID=5">腰椎</a></li>
+</ul>
+</div>
+</div>
+<div class="row margin_top20">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 search_ltl">年龄：</div>
+<div class="col-lg-11 col-md-11 col-sm-11 col-xs-12 search_lt">
+<ul class="list-unstyled" id="age_ul">
+<li><a href="?MinA=&MaxA=&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">全部</a></li>
+<li><a href="?MinA=20&MaxA=30&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">20~30</a></li>
+<li><a href="?MinA=30&MaxA=40&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">30~40</a></li>
+<li><a href="?MinA=40&MaxA=50&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">40~50</a></li>
+<li><a href="?MinA=50&MaxA=60&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">50~60</a></li>
+<li><a href="?MinA=60&MaxA=70&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">60~70</a></li>
+<li><a href="?MinA=70&MaxA=80&Area={$GetRequest(Area)$}&KeyWord={$GetRequest(KeyWord)$}&CateID={$GetRequest(CateID)$}">70~80</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="search_ltips">共找到0个帖子</div>
+<div class="search_lc">
+{ZL.Label id="输出指定条件帖子列表_分页" Area="{$GetUrldecode({$GetRequest(Area)$})$}" KeyWord="{$GetUrldecode({$GetRequest(KeyWord)$})$}" CateID="{$GetRequest(CateID)$}" MaxA="{$GetRequest(MaxA)$}" MinA="{$GetRequest(MinA)$}" ShowNum="30" TitleNum="50" /}
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pcolumn_r">
+<div class="pcolumn_r_recovery">
+<p class="pcolumn_r_recovery_p">康复视频</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出父栏目推荐视频图片标题_无分页" NodeID="9" ShowNum="4" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+<div class="pcolumn_r_recovery" id="pcolumn_r_know">
+<p class="pcolumn_r_recovery_p">知识堂排行榜</p>
+<uL class="list-unstyled">
+{ZL.Label id="根据点击输出文章标题_不带时间" NodeID="3" ShowNum="9" TitleNum="32" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+		
+
+$().ready(function(e) {
+	var area='{$GetUrldecode({$GetRequest(Area)$})$}';
+	var keyword='{$GetUrldecode({$GetRequest(KeyWord)$})$}';
+	var cateid='{$GetUrldecode({$GetRequest(CateID)$})$}';
+	var mina='{$GetUrldecode({$GetRequest(MinA)$})$}';
+	var maxa='{$GetUrldecode({$GetRequest(MaxA)$})$}';
+	if(area!="")
+	{
+		$("#area_ul li").each(function(index, element) {
+			if($(this).find("a").html()==area)
+				$(this).addClass("active");
+		});
+	}
+	else
+		$("#area_ul li:first-child").addClass("active");
+	if(keyword!="")
+	{
+		$("#key_ul li").each(function(index, element) {
+			if($(this).find("a").html()==keyword)
+				$(this).addClass("active");
+		});
+	}
+	else
+		$("#key_ul li:first-child").addClass("active");
+	if(cateid!="")
+	{
+		$("#cate_ul li").each(function(index, element) {
+			if(cateid=="4")
+				$(this).parent().find("li:nth-child(2)").addClass("active");
+			else if(cateid=="5")
+				$(this).parent().find("li:nth-child(3)").addClass("active");
+		});
+	}
+	else
+		$("#cate_ul li:first-child").addClass("active");
+	if(mina!=""&&maxa!="")
+	{
+		$("#age_ul li").each(function(index, element) {
+			if($(this).find("a").html()==mina+"~"+maxa)
+				$(this).addClass("active");
+		});
+	}
+	else
+		$("#age_ul li:first-child").addClass("active");
+    $(".item-list1").addClass("active");
+});
+</script>

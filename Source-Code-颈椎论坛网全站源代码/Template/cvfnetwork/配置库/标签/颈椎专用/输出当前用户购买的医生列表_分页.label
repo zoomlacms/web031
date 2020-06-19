@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>785</LabelID>
+    <LabelName>输出当前用户购买的医生列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>颈椎专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.Email,{table1}.dbo.ZL_User.UserID,{table1}.dbo.ZL_User.UserName,{table1}.dbo.ZL_UserBase.Address,{table1}.dbo.ZL_UserBase.Mobile,{table1}.dbo.ZL_UserBase.TrueName,{table1}.dbo.ZL_UserBase.UserSex</LabelField>
+    <LabelWhere>ZL_User.UserID in ( select Ordermessage from ZL_Orderinfo where Userid={ZL:GetuserID()/} And Paymentstatus=1 And OrderStatus=99  And ISNUMERIC(Ordermessage)&gt;0)</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_User.LastActiveTime DESC</LabelOrder>
+    <LabelContent>&lt;table class="table table-striped table-bordered table-hover"&gt;
+&lt;tr&gt;
+&lt;th&gt;用户ID&lt;/th&gt;
+&lt;th&gt;用户名&lt;/th&gt;
+&lt;th&gt;Email&lt;/th&gt;
+&lt;th&gt;真实姓名&lt;/th&gt;
+&lt;th&gt;手机号码&lt;/th&gt;
+&lt;th&gt;联系地址&lt;/th&gt;
+&lt;/tr&gt;
+{Repeate}
+&lt;tr&gt;
+&lt;td&gt;{Field="UserID"/}&lt;/td&gt;
+&lt;td&gt;{Field="UserName"/}&lt;/td&gt;
+&lt;td&gt;{Field="Email"/}&lt;/td&gt;
+&lt;td&gt;{Field="TrueName"/}&lt;/td&gt;
+&lt;td&gt;{Field="Mobile"/}&lt;/td&gt;
+&lt;td&gt;{Field="Address"/}&lt;/td&gt;
+&lt;/tr&gt;{/Repeate}
+&lt;/table&gt;
+{ZL.Page id="响应式列表分页v3"/}
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

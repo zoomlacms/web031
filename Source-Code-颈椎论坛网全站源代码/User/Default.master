@@ -1,0 +1,69 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="User_I_Default, App_Web_aie0qeud" clientidmode="Static" %><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/dist/css/font-awesome.min.css"/>
+<link type="text/css" rel="stylesheet" href="/App_Themes/ICMS/User_V3.css" />
+<script type="text/javascript" src="/JS/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+<link href="/Template/cvfnetwork/style/global.css" rel="stylesheet" />
+<style>
+#TxtKeyword { max-width:none;}
+</style>
+<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<%Call.Label("{ZL.Label id=\"全站头部\"/}");%>
+<form id="form1" runat="server">
+    <div class="hidden">
+        <asp:Image ID="imgUserPic" Width="3.5em" Height="3.5em" AlternateText="" runat="server" />
+        <p style="margin-bottom: 5px; line-height: normal;">会员：<asp:Label ID="UserNameLb" runat="server" Text=""></asp:Label></p>
+        <p style="margin-bottom: 5px; line-height: normal;">会员等级：<asp:Label ID="UserLvLb" runat="server" Text=""></asp:Label></p>
+    </div>
+    <div class="container user_main">
+        <div class="row padding5">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 padding10">
+                <div class="user_left">
+					<div class="user_left_t"><span class="glyphicon glyphicon-circle-arrow-down"></span>会员中心</div>
+                    <ul class="list-unstyled">
+						<li><a href="/User/Info/UserInfo.aspx">账号信息</a></li>
+						<li><a href="/User/Info/ListProfit.aspx">我的收益</a></li>
+						<li><a href="/PayOnline/SelectPayPlat.aspx">充值金额</a></li>
+						<li><a href="/User/Info/ExchangeDP.aspx">兑换金额</a></li>
+						<li><a href="/User/Info/ExchangeIntegral.aspx">兑换积分</a></li>
+						<li><a href="/User/Info/UserInfo.aspx">积分明细</a></li>
+						<li><a href="/User/Order/PreViewOrder1.aspx?menu=Orderinfo">购买的医生</a></li>
+						<li><a href="/User/Info/ExchangeDP1.aspx">提现</a></li>
+						<li><a href="/User/UserFunc/GPurchase.aspx">用户升级</a></li>
+						<li><a href="/User/UserFunc/UserSignin.aspx">每日签到</a></li>
+						<li><a href="/User/CashCoupon/ArriveManage.aspx">优惠券</a></li>
+						<li><a href="/User/Info/UserRecei.aspx">我的地址簿</a></li>
+						<li><a href="/User/Info/UserDay.aspx">节日提醒</a></li>
+						<li><a href="/User/SetSecondPwd.aspx">支付密码</a></li>
+						<li><a href="/User/ChangeEmail.aspx">修改邮箱</a></li>
+						<li><a href="/User/ChangeMP.aspx">修改手机</a></li>
+						<li><a href="/User/PubManage.aspx">评论管理</a></li>
+						<li><a href="/User/Logout.aspx">安全退出</a></li>
+					</ul>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 padding10 user_right">
+                <ol class="breadcrumb" style="display: none;">
+                    <asp:Literal runat="server" ID="navLabel"></asp:Literal>
+                </ol>
+                <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+<asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+</form>
+<%Call.Label("{ZL.Label id=\"全站底部\"/}");%>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>763</LabelID>
+    <LabelName>输出贴吧节点名_列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,1,1,父节点ID|TitleNum,30,1,标题长度|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Guestcate</LabelTable>
+    <LabelField>Cateid,Catename,ParentID</LabelField>
+    <LabelWhere>ParentID=@ParentID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>
+{Repeate}
+&lt;ul class="list-unstyled"&gt;
+{ZL.Label id="输出贴吧贴子标题_列表" CateID="{Field="Cateid"/}" ShowNum="@ShowNum" TitleNum="@TitleNum" /}
+&lt;/ul&gt;
+{/Repeate}
+
+
+
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

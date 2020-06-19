@@ -1,0 +1,127 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>737</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home_top"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 home_top_l"&gt;
+&lt;p&gt;请把医疗论坛告诉你身边饱受病痛折磨的朋友，无论他们是你的朋友、同事、邻居与信任。请告诉他们在这里我们不是一个人在战斗！&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_top_r"&gt;
+&lt;ul class="list-unstyled  pull-right"&gt;
+&lt;li class="uname_li"&gt;{ZL.Label id="判断用户名是否登录"/}&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeListUrl(7)/}" target="_blank"&gt;注册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="btn-group"&gt;
+&lt;a href="javascript:void(0)" type="button" data-toggle="dropdown" aria-expanded="false"&gt;我的提问&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu" role="menu"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(6)/}" target="_blank"&gt;颈椎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(7)/}" target="_blank"&gt;腰椎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(8)/}" target="_blank"&gt;胸口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(9)/}" target="_blank"&gt;头部&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="btn-group"&gt;
+&lt;a href="javascript:void(0)" data-toggle="dropdown" aria-expanded="false"&gt;网站导航&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu" role="menu"&gt;
+{ZL.Label id="根据父节点输出子节点名" ParentID="0" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--顶部到此结束 --&gt;
+&lt;div class="home_topa"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 home_topa_l"&gt;
+&lt;a href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home_topa_m"&gt;
+&lt;ul class="list-unstyled hidden-xs"&gt;
+&lt;li class="active"&gt;&lt;span&gt;综合&lt;/sapn&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/search/SearchList.aspx?node=0&amp;keyword=%e7%97%87%e7%8a%b6" target="_blank"&gt;症状&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/search/SearchList.aspx?node=11&amp;keyword=%e9%a2%88%e6%a4%8e" target="_blank"&gt;颈椎&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/search/SearchList.aspx?node=0&amp;keyword=%e8%85%b0%e6%a4%8e" target="_blank"&gt;腰椎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;div class="home_topa_b"&gt;
+&lt;form action="/search/SearchList.aspx" method="get"&gt;
+&lt;img src="{$CssDir/}images/pic1.jpg" alt="{$SiteName/}"/&gt;
+&lt;div class="input-group pull-right"&gt;
+&lt;input name="keyword" type="text" placeholder="请输入您要搜索的信息" id="TxtKeyword" class="form-control"  /&gt;
+&lt;span class="input-group-btn"&gt;
+&lt;input type="submit"  value="搜索" id="ButtonSo" class="btn" style="width:100px" /&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 home_topa_r"&gt;
+&lt;img src="{$CssDir/}images/logo2.jpg" alt="{$SiteName/}" class="img-responsive"/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 头部到此结束 --&gt;
+&lt;div class="home_logo" id="scolls"&gt;
+&lt;div class="navbar navbar-default"&gt;
+&lt;div class="navbar navbar-static-top" role="navigation" id="scolls"&gt;
+&lt;div class="container"&gt;
+&lt;div class="navbar-header"&gt;
+&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class="menua visible-xs"&gt;颈椎论坛网欢迎您的到来！&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="navbar-collapse collapse"&gt;
+&lt;ul class="nav navbar-nav"&gt;
+  &lt;li&gt;&lt;a href="/" target="_blank"&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ind"&gt;&lt;a href="/index" target="_blank"&gt;颈腰交流社区&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;寻找病友&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba3"&gt;&lt;a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank"&gt;知识堂&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba4"&gt;&lt;a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank"&gt;图集&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba24"&gt;&lt;a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank"&gt;就医指南&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba5"&gt;&lt;a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank"&gt;椎友在买&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba6"&gt;&lt;a href="{ZL:GetNodeLinkUrl(6)/}" target="_blank"&gt;二手交易&lt;/a&gt;&lt;/li&gt;
+&lt;li class="home_ba10"&gt;&lt;a href="{ZL:GetInfoUrl(200)/}" target="_blank"&gt;关于论坛&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- 导航到此结束 --&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

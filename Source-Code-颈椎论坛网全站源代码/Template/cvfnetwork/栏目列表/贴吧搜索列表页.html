@@ -1,0 +1,72 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="/App_Themes/Guest/bar.css" rel="stylesheet" />
+<link href="/Plugins/Ueditor/third-party/video-js/video-js.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script type="text/javascript" src="/JS/Controls/ZL_Dialog.js"></script>
+<script type="text/javascript" src="/Plugins/Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/Plugins/Ueditor/ueditor.all.min.js"></script>
+<script src="/Plugins/Ueditor/third-party/video-js/video.js"></script>
+<script type="text/javascript" src="/JS/jquery-ui.min.js"></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/} 
+<div id="centerdiv">
+<div class="container">
+<div class="bar_RelButton"><a href="/Index" title="返回列表">&lt;返回社区列表</a></div>
+<div id="bar_hdiv" class="bar_hdiv">
+<div class="bar_imgDiv"><img id="BarImage_img" onerror="this.src='/Images/nopic.gif';" src="/App_Themes/Guest/images/timg.jpg"></div>
+<div class="bar_Title">
+<div>
+<a href="javascript:;" onclick="location=location;" title="贴吧"><span id="BarName_L">相关"<span style="color:#ff6a00;">地区：{$GetUrldecode({$GetRequest(Area)$})$} 症状：{$GetUrldecode({$GetRequest(KeyWord)$})$} 部位：{ZL.Label id="输出指定贴吧版面名" CateID="{$GetRequest(CateID)$}" /} 年龄{$GetRequest(MinA)$}~{$GetRequest(MaxA)$}</span>"的贴子</span></a>
+<span id="totalspan" class="countInfo">共搜索到{ZL.Label id="输出指定年龄地区症状部位帖子总数" Area="{$GetUrldecode({$GetRequest(Area)$})$}" KeyWord="{$GetUrldecode({$GetRequest(KeyWord)$})$}" CateID="{$GetRequest(CateID)$}" MaxA="{$GetRequest(MaxA)$}" MinA="{$GetRequest(MinA)$}" ShowNum="10" /}个贴子</span>
+</div>
+<div><span id="BarInfo_L"></span></div>
+</div>
+<div class="clearboth"></div>
+</div><!--bar_hdiv end-->
+<div id="contentdiv" style="min-height:500px;">
+{ZL.Label id="输出指定年龄地区症状部位帖子列表_分页" Area="{$GetUrldecode({$GetRequest(Area)$})$}" KeyWord="{$GetUrldecode({$GetRequest(KeyWord)$})$}" CateID="{$GetRequest(CateID)$}" MaxA="{$GetRequest(MaxA)$}" MinA="{$GetRequest(MinA)$}" ShowNum="10" /}
+</div>
+<div class="floattool" style="left:48%">
+<ul>
+<li onclick="returnTop()" onmouseout="hideTxt(this)" onmouseover="showTxt(this)"><a href="javascript:;"><span class="glyphicon glyphicon-arrow-up"></span></a><span class="txtSpan">回 到 顶 部</span></li>
+<li onclick="returnDown()" onmouseout="hideTxt(this)" onmouseover="showTxt(this)"><a href="/PClass?searchstr=%E8%90%A8%E8%BE%BE"><span class="glyphicon glyphicon-plus"></span></a><span class="txtSpan">发 表 帖 子</span></li>
+<li onclick="returnPost()" onmouseout="hideTxt(this)" onmouseover="showTxt(this)"><a href="/Index" class="last"><span class="glyphicon glyphicon-th"></span></a><span class="txtSpan">回 到 社 区</span></li>
+</ul>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+		
+
+$().ready(function(e) {
+    $(".item-list1").addClass("active");
+});
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>769</LabelID>
+    <LabelName>根据年龄段搜索会员</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>颈椎专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,20,1,分页显示数|fTIme,,1,开始时间|Etime,,1,结束时间</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.UserID,{table1}.dbo.ZL_User.UserName,{table1}.dbo.ZL_UserBase.UserFace</LabelField>
+    <LabelWhere>birthday&gt;dateadd(year,-@Etime,getdate()) and birthday&lt;dateadd(year,-@fTIme,getdate()) </LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="/PClass?uid={Field="UserID"/}" target="_blank"&gt;&lt;img src="{Field="UserFace"/}" alt="{Field="UserName"/}"  onerror="this.onerror=null;this.src='/UploadFiles/nopic.gif'" /&gt;&lt;/a&gt;&lt;br/&gt;
+&lt;a href="/PClass?uid={Field="UserID"/}" target="_blank"&gt;会员名：{Field="UserName"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

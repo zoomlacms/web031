@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>735</LabelID>
+    <LabelName>判断用户名是否登录</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;a href="/User/" target="_blank"&gt;{ZL:GetuserName()/}&lt;/a&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>用户登录判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>1</IsOpen>
+    <FalseContent>&lt;a href="/User/" target="_blank"&gt;登录&lt;/a&gt;</FalseContent>
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

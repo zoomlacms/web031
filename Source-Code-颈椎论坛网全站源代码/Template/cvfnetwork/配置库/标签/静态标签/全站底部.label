@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>738</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home_bottom"&gt;
+&lt;div class="container"&gt;
+&lt;ul class="list-unstyled col-md-offset-4"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank"&gt;友情链接&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(10)/}" target="_blank"&gt;关于论坛&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(3)/}" target="_blank"&gt;联系我们&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(4)/}" target="_blank"&gt;版权申明&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(5)/}" target="_blank"&gt;服务条款&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;p class="text-center"&gt;{$Copyright/}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="home_code"&gt;
+&lt;img src="{$CssDir/}images/pic9.jpg" alt=""/&gt;
+&lt;p class="text-center"&gt;扫一扫&lt;br&gt;加入我们这个大家庭&lt;/p&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

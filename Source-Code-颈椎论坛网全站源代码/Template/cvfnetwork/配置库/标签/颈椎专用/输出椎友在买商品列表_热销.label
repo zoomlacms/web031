@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>772</LabelID>
+    <LabelName>输出椎友在买商品列表_热销</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>颈椎专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|TitleNum,30,1,标题长|ShowNum,10,1,显示数|SysNum,100,1,简介数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Commodities left join {table1}.dbo.ZL_P_Shop on {table1}.dbo.ZL_Commodities.ItemID={table1}.dbo.ZL_P_Shop.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_Commodities.ID,{table1}.dbo.ZL_Commodities.Proinfo,{table1}.dbo.ZL_Commodities.Proname,{table1}.dbo.ZL_Commodities.Thumbnails</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Sales=1 And ishot=1</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_Commodities.AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;
+&lt;div class="media"&gt;
+&lt;div class="media-left"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" title="{Field="Proname"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" alt="{Field="Proname"/}" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="media-body"&gt;
+&lt;h4 class="media-heading"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" title="{Field="Proname"/}"&gt;{ZL:CutText({Field="Proname"/},@TitleNum,)/}&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;{ZL:CutText({Field="Proinfo"/},@SysNum,..)/}&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;[详情]&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

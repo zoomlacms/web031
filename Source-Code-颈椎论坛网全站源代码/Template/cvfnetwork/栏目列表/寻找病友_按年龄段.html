@@ -1,0 +1,127 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>按年龄段搜索_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}fix.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.home_logo .navbar-default .navbar-nav>.home_ba{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}>a { background:#FFFFFF;color:#719cc8;}
+</style>
+</head>
+<body class="body">
+{ZL.Label id="全站头部"/} 
+<div><img src="{$CssDir/}images/pic4.jpg" alt="{$SiteName/}"  class="img-responsive center-block" /></div>
+
+<div class="container">
+<div class="pcolumn">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 pcolumn_l pcolumn_tz">
+<ol class="breadcrumb" id="breadcrumb">
+<li>您的位置：<a href="/">首页</a>>></li>
+<li>按地区搜索</li>
+</ol>
+       <ul class="list-unstyled homediqu">
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(北京)$}">北京</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(天津)$}">天津</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(上海)$}">上海</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(重庆)$}">重庆</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">河北省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">山西省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">辽宁省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">吉林省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">黑龙江省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河北省)$}">江苏省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(浙江省)$}">浙江省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(安徽省)$}">安徽省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(福建省)$}">福建省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(江西省)$}">江西省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(山东省)$}">山东省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(河南省)$}">河南省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(湖北省)$}">湖北省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(湖南省)$}">湖南省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(广东省)$}">广东省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(海南省)$}">海南省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(四川省)$}">四川省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(贵州省)$}">贵州省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(云南省)$}">云南省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(陕西省)$}">陕西省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(甘肃省)$}">甘肃省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(青海省)$}">青海省</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(内蒙古)$}">内蒙古</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(广西)$}">广西</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(西藏)$}">西藏</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(宁夏)$}">宁夏</a>
+        <a href="/Class_1/Default.aspx?diqu={$GetUrlencode(新疆)$}">新疆</a>       
+       </ul>
+<div class="clearfix"></div>
+<ul class="list-unstyled homeqidulist">
+{ZL.Label id="根据年龄段搜索会员" ShowNum="20" fTIme="{$GetRequest(f)$}" Etime="{$GetRequest(e)$}" /}
+</ul>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pcolumn_r">
+<div class="pcolumn_r_recovery pcolumn_tz">
+<p class="pcolumn_r_recovery_p">最热帖子</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出帖子列表" ParentID="23" ShowNum="10" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+
+<div class="pcolumn_tz_img">
+<img src="{$CssDir/}images/celpase2.jpg" alt="{$SiteName/}"  class="img-responsive" />
+</div>
+
+<div class="pcolumn_r_recovery" id="pcolumn_r_know">
+<p class="pcolumn_r_recovery_p">知识堂排行榜</p>
+<uL class="list-unstyled">
+{ZL.Label id="根据点击输出文章标题_不带时间" NodeID="3" ShowNum="9" TitleNum="32" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+		
+
+$().ready(function(e) {
+    $(".item-list1").addClass("active");
+});
+
+
+
+if ($('.pcolumn_l_a')==''){ 
+$(".pcolumn_l ul li").hide();
+} 
+
+
+
+var test=document.getElementsByClassName('.pcolumn_l ul li .pcolumn_l_a'); 
+for(var i=0 ;i<test.length;i++) 
+{ 
+    var p=test[i].parentNode; 
+    if(p.getElementsByTagName('.pcolumn_l ul li').length==0) 
+    { 
+         p.style.display='none'; 
+     } 
+
+}
+
+ $(".pcolumn_l_a").each(function(){               
+ var t = $(this).html();              
+  t = t.replace(/[\r\n]/g,"").replace(/[ ]/g,"");               
+  if(t == ''){                                      
+    $(this).parent().hide();               
+	}           
+	}); 
+</script>

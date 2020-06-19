@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>776</LabelID>
+    <LabelName>输出指定贴吧版面名</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>颈椎专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>CateID,0,1,贴吧ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Guestcate</LabelTable>
+    <LabelField>Catename</LabelField>
+    <LabelWhere>GType=1 And Cateid=@CateID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Catename"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>cvfnetwork</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

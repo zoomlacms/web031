@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>30</ModelID>
+    <ModelName>就医指南</ModelName>
+    <Description />
+    <TableName>ZL_C_jyzn</TableName>
+    <ItemName>医院</ItemName>
+    <ItemUnit>家</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-plus-sign</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认就医指南内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

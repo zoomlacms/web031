@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/Template/office/{$CssDir/}images/win8_symbol_140x140.png" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" >
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet">
+<script src="{$CssDir/}js/NSW_Index.js" type="text/javascript"></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body class="body">
+<div class="home_top">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 home_top_l">
+<p>请把医疗论坛告诉你身边饱受病痛折磨的朋友，无论他们是你的朋友、同事、邻居与信任。请告诉他们在这里我们不是一个人在战斗！</p>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12  home_top_r">
+<ul class="list-unstyled pull-right">
+<li class="uname_li"><a href="/User">登录</a></li>
+<li><a href="{ZL:GetNodeListUrl(7)/}" target="_blank">注册</a></li>
+<li>
+<div class="btn-group">
+<a href="javascript:void(0)" type="button" data-toggle="dropdown" aria-expanded="false">我的提问<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="{ZL:GetInfoUrl(6)/}" target="_blank">颈椎</a></li>
+<li><a href="{ZL:GetInfoUrl(7)/}" target="_blank">腰椎</a></li>
+<li><a href="{ZL:GetInfoUrl(8)/}" target="_blank">胸口</a></li>
+<li><a href="{ZL:GetInfoUrl(9)/}" target="_blank">头部</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="btn-group">
+<a href="javascript:void(0)" data-toggle="dropdown" aria-expanded="false">网站导航<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+{ZL.Label id="根据父节点输出子节点名" ParentID="0" /}
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div><!--顶部到此结束 -->
+<div class="home_topa">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 home_topa_l">
+<a href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}" /></a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home_topa_m">
+<ul class="list-unstyled hidden-xs">
+<li class="active"><span>综合</span></li>
+<li><a href="/search/SearchList.aspx?node=0&keyword=%e7%97%87%e7%8a%b6" target="_blank">症状</a></li>
+<li><a href="/search/SearchList.aspx?node=11&keyword=%e9%a2%88%e6%a4%8e" target="_blank">颈椎</a></li>
+<li><a href="/search/SearchList.aspx?node=0&keyword=%e8%85%b0%e6%a4%8e" target="_blank">腰椎</a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="home_topa_b">
+<form action="/search/SearchList.aspx" method="get">
+<img src="{$CssDir/}images/pic1.jpg" alt="{$SiteName/}"/>
+<div class="input-group pull-right">
+<input name="keyword" type="text" placeholder="请输入您要搜索的信息" id="TxtKeyword" class="form-control"  />
+<span class="input-group-btn">
+<input type="submit"  value="搜索" id="ButtonSo" class="btn" style="width:100px" />
+</span>
+</div>
+<div class="clearfix"></div>
+</form>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 home_topa_r">
+<img src="{$CssDir/}images/logo2.jpg" alt="{$SiteName/}" class="img-responsive"/>
+</div>
+</div>
+</div>
+</div><!-- 头部到此结束 -->
+<div class="home_logo" id="scolls">
+<div class="navbar navbar-default">
+<div class="navbar navbar-static-top" role="navigation" id="scolls">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="menua visible-xs">颈椎论坛网欢迎您的到来！</div>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="home_ba"><a href="/" target="_blank">首页</a></li>
+<li class="home_index"><a href="/index" target="_blank">颈腰交流社区</a></li>
+<li class="home_ba2"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">寻找病友</a></li>
+<li class="home_ba3"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank">知识堂</a></li>
+<li class="home_ba4"><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">图集</a></li>
+<li class="home_ba24"><a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank">就医指南</a></li>
+<li class="home_ba5"><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">椎友在买</a></li>
+<li class="home_ba6"><a href="{ZL:GetNodeLinkUrl(6)/}" target="_blank">二手交易</a></li>
+<li class="home_ba10"><a href="{ZL:GetInfoUrl(200)/}" target="_blank">关于论坛</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><!-- 导航到此结束 -->
+<div class="home_carousel">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="{$CssDir/}images/celpase.jpg"  alt="{$SiteName/}"  class="img-responsive"/>
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<img src="{$CssDir/}images/pic6.jpg" alt="{$SiteName/}"  class="img-responsive"/>
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<img src="{$CssDir/}images/pic5.jpg" alt="{$SiteName/}"  class="img-responsive"/>
+<div class="carousel-caption">
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div><!--广告到此结束 -->
+<div class="container">
+<div class="home_xinxi">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-5 col-md-5 col-sm-5 col-xs-12 home_xinxi_l">
+<p>热门话题<a href="index" class="pull-right">更多></a></p>
+<div class="clearfix"></div>
+<ul class="list-unstyled ul2">
+{ZL.Label id="输出推荐医生回复文章标题_不带时间" NodeID="11" ShowNum="11" TitleNum="30" /}
+</ul>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o">
+<p>最新话题<a href="{ZL:GetNodeLinkUrl(3)/}" class="pull-right" target="_blank">更多></a></p>
+{ZL.Label id="输出推荐文章简介图片标题_不循环" NodeID="3" ShowNum="1" TitleNum="20" SnyNum="80" /}
+<div class="clearfix"></div>
+<ul class="list-unstyled home_xinxi_o_ul">
+{ZL.Label id="输出推荐文章标题_循环" NodeID="3" ShowNum="7" TitleNum="45" /}
+<div class="clearfix"></div>
+</ul>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12 home_xinxi_o" id="home_xinxi_o">
+<p class="home_video_p3">行业新闻<a href="{ZL:GetNodeLinkUrl(4)/}" class="pull-right" target="_blank">更多></a></p>
+<ul class="list-unstyled">
+{ZL.Label id="输出文章标题_不带时间" NodeID="4" ShowNum="11" TitleNum="34" /}
+</ul>
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div><!--home_xinxi end-->
+<div class="home_carousel2">
+<div class="row">
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+<div class="home_carousel2-l">
+<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic1" data-slide-to="0" class="active"><span>1</span></li>
+<li data-target="#carousel-example-generic1" data-slide-to="1"><span>2</span></li>
+<li data-target="#carousel-example-generic1" data-slide-to="2"><span>3</span></li>
+<li data-target="#carousel-example-generic1" data-slide-to="3"><span>4</span></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+{ZL.Label id="输出首页滚动图片_无分页" NodeID="3" ShowNum="4" TitleNum="30" /}
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 home_search">
+<div class="home_search_t">寻找病友</div>
+<div class="home_search_tc">
+<form method="get" action="/Class_1/NodeNews.aspx">
+<input type="hidden" name="MinA" id="MinA" value="20" />
+<input type="hidden" name="MaxA" id="MaxA" value="30" />
+<ul class="list-unstyled">
+<li>
+<div class="row padding5">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding10">
+<span><i class="fa fa-map-marker"></i>地区</span>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding10">
+<select class="form-control" name="Area">
+<option value="北京">北京</option>
+<option value="天津">天津</option>
+<option value="上海">上海</option>
+<option value="重庆">重庆</option>
+<option value="河北省">河北省</option>
+<option value="山西省">山西省</option>
+<option value="辽宁省">辽宁省</option>
+<option value="吉林省">吉林省</option>
+<option value="黑龙江省">黑龙江省</option>
+<option value="江苏省">江苏省</option>
+<option value="浙江省">浙江省</option>
+<option value="安徽省">安徽省</option>
+<option value="福建省">福建省</option>
+<option value="江西省">江西省</option>
+<option value="山东省">山东省</option>
+<option value="河南省">河南省</option>
+<option value="湖北省">湖北省</option>
+<option value="湖南省">湖南省</option>
+<option value="广东省">广东省</option>
+<option value="海南省">海南省</option>
+<option value="四川省">四川省</option>
+<option value="贵州省">贵州省</option>
+<option value="云南省">云南省</option>
+<option value="陕西省">陕西省</option>
+<option value="甘肃省">甘肃省</option>
+<option value="青海省">青海省</option>
+<option value="内蒙古">内蒙古</option>
+<option value="广西">广西</option>
+<option value="西藏">西藏</option>
+<option value="宁夏">宁夏</option>
+<option value="宁夏">新疆</option>
+</select>
+</div>
+</div>
+</li>
+<li>
+<div class="row padding5">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding10">
+<span><i class="fa fa-plus-square-o"></i>症状</span>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding10">
+<select class="form-control" name="KeyWord">
+<option value="头晕">头晕</option>
+<option value="疼痛">疼痛</option>
+<option value="手麻">手麻</option>
+<option value="迟滞">迟滞</option>
+<option value="流口水">流口水</option>
+</select>
+</div>
+</div>
+</li>
+<li>
+<div class="row padding5">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding10">
+<span><i class="fa fa-wheelchair"></i>部位</span>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding10">
+<select class="form-control" name="CateID">
+<option value="4">颈椎</option>
+<option value="5">腰椎</option>
+</select>
+</div>
+</div>
+</li>
+<li>
+<div class="row padding5">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding10">
+<span><i class="fa fa-user-md"></i>年龄</span>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding10">
+<select class="form-control" id="Age_sel">
+<option min="20" max="30">20~30</option>
+<option min="30" max="40">30~40</option>
+<option min="40" max="50">40~50</option>
+<option min="50" max="60">50~60</option>
+<option min="60" max="70">60~70</option>
+<option min="70" max="80">70~80</option>
+</select>
+</div>
+</div>
+</li>
+<li>
+<button type="submit" class="btn btn-primary">我要寻找同症状病友</button>
+</li>
+</ul>
+</form>
+</div>
+</div>
+</div><!--home_carousel2 end-->
+<div class="home_logo2"><img src="{$CssDir/}images/logo3.jpg" class="img-responsive"></div>
+<div class="home_video">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+<div class="home_video_r">
+<div class="home_video_r_t">
+<p class="home_video_p2">椎友要买<a href="{ZL:GetNodeLinkUrl(5)/}" class="pull-right" target="_blank">更多></a></p>
+<ul class="list-unstyled">
+{ZL.Label id="输出文章标题_不带时间" NodeID="5" ShowNum="4" TitleNum="34" /}
+</ul>
+</div>
+</div>
+<a href="#" class="taobao_ad"><img src="{$CssDir/}images/taobao_ad.jpg" class="center-block img-responsive" alt="广告位" /></a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="home_video_l">
+<p class="home_video_p1">视频中心<a href="{ZL:GetNodeLinkUrl(9)/}" class="pull-right" target="_blank">更多></a></p>
+<div class="row">
+<div class="padding5">
+<ul class="list-unstyled">
+{ZL.Label id="输出视频图片标题_无分页" NodeID="9" ShowNum="6" TitleNum="22" /}
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_video_r">
+<div class="home_video_r_t">
+<p class="home_video_p3">二手交易<a href="{ZL:GetNodeLinkUrl(6)/}" class="pull-right" target="_blank">更多></a></p>
+<ul class="list-unstyled ul2">
+{ZL.Label id="首页商品列表" NodeID="6" TitleNum="30" ShowNum="3" ClassName="oldershop" /}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><!--home_video end-->
+<div class="home_logo3"><img src="{$CssDir/}images/logo4.jpg" class="img-responsive"></div>
+<div class="home_waist home_xinxi">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o">
+<p>颈腰知识<a href="{ZL:GetNodeLinkUrl(11)/}" class="pull-right"  target="_blank">更多></a></p>
+<ul class=" list-unstyled ul2">
+{ZL.Label id="输出文章标题_带时间" NodeID="11" ShowNum="11" TitleNum="34" /}
+</ul>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o">
+<p>临床诊断<a href="{ZL:GetNodeLinkUrl(12)/}" class="pull-right"  target="_blank">更多></a></p>
+<ul class=" list-unstyled ul2">
+{ZL.Label id="输出文章标题_带时间" NodeID="12" ShowNum="11" TitleNum="34" /}
+</ul>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o" id="home_waist_r">
+<p>热门标签</p>
+<ul class="list-unstyled">
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 col-md-offset-4 home_waist_div" style=" background:#ffffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+手术" target="_blank" style=" color:#a74f98">手术</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0 ">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+飞燕" target="_blank" style=" color:#008ad6">飞燕</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center col-md-offset-4 padding0 home_waist_div" style=" background:#cdffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+人造椎间盘" target="_blank" style=" color:#000000">人造椎间盘</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 col-md-offset-4 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+倒走" target="_blank" style=" color:#5757ee">倒走</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#008ad6"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+美国" target="_blank" style=" color:#ffc8a3">美国治突出</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#ffffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+针刀" target="_blank" style=" color:#800000">小针刀</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#008ad6"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+膨出+突出" target="_blank" style=" color:#ffffff">膨出和突出</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#ffffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+坐骨神经痛" target="_blank" style=" color:#000000">坐骨神经痛</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center col-md-offset-4 padding0 home_waist_div" style=" background:#ffffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+急性期" target="_blank" style=" color:#a75f33">急性期</a></div>
+</li> 
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 col-md-offset-4 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+椎管狭窄" target="_blank" style=" color:#c0c057">椎管狭窄</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#008ad6"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+手术+复发" target="_blank" style=" color:#ffffff">手术复发</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#ffffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+喝酒" target="_blank" style=" color:#158d88">喝酒</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 home_waist_div" style=" background:#008ad6"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+胶原酶溶解" target="_blank" style=" color:#3ef2fd">胶原酶溶解</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center  padding0 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+CT+MRI" target="_blank" style=" color:#3c80a7">CT和MRI</a></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center col-md-offset-4 padding0 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+锻炼" target="_blank" style=" color:#ff45f1">锻炼</a></div>
+</li>
+<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center padding0">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center padding0 col-md-offset-4 home_waist_div" style=" background:#ccffcc"><a href="http://www.baidu.com/s?wd=site:yz-bbs.com+COFLEX" target="_blank" style=" color:#ff45f1">COFLEX</a></div>
+</li>
+</ul>
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div><!--home_waist end-->
+<div class="home_waist home_xinxi">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o">
+<p>锻炼预防<a href="{ZL:GetNodeLinkUrl(13)/}" class="pull-right"  target="_blank">更多></a></p>
+<ul class=" list-unstyled ul2">
+{ZL.Label id="输出文章标题_带时间" NodeID="13" ShowNum="11" TitleNum="34" /}
+</ul>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o">
+<p>治疗方法<a href="{ZL:GetNodeLinkUrl(14)/}" class="pull-right"  target="_blank">更多></a></p>
+<ul class=" list-unstyled ul2">
+{ZL.Label id="输出文章标题_带时间" NodeID="14" ShowNum="11" TitleNum="34" /}
+</ul>
+</li>
+
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home_xinxi_o" id="home_recovery" >
+<p>病友康复榜</p>
+<div class="row">
+<ul class="list-unstyled" id="home_recovery_ul">
+{ZL.Label id="输出康复会员列表" ShowNum="3" SnyNum="60" /}
+</ul>
+</div>
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div><!--home_waist end-->
+<div class="home_tupian hidden-xs">
+<div class="home_tupian_title"><span class="pull-left">图集</span><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">更多></a></span><div class="clearfix"></div></div>
+<div class="col-lg-12 rollBox">
+<div class="row">
+<div class=" LeftBotton">
+<img src="{$CssDir/}images/Background5.png"  alt=""  onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()">
+</div>
+<div class="Cont" id="ISL_Cont">
+<div class="ScrCont">
+<div id="List1">
+{ZL.Label id="输出首页组图滚动图片_无分页" NodeID="4" ShowNum="8" TitleNum="20" /}
+</div>
+<div id="List2"></div>
+</div>
+</div>
+<div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()">
+<img src="{$CssDir/}images/Background6.png"  alt=""   onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()">
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div><!--home_tupian end-->
+<div class="home_tupian visible-xs">
+<div class="home_tupian_title"><span class="pull-left">图集</span><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">更多></a></span><div class="clearfix"></div></div>
+<div class="ScrCont">
+<ul class="list-unstyled ">
+{ZL.Label id="输出首页组图滚动图片_无分页" NodeID="4" ShowNum="8" TitleNum="20" /}
+</ul>
+</div>
+</div>
+
+<div class="container home_link">
+<p>友情链接<a href="{ZL:GetNodeLinkUrl(8)/}" class="pull-right"  target="_blank">更多></a></p>
+<ul class="list-unstyled ula">
+{ZL.Label id="输出友情链接标题_无分页" NodeID="8" ShowNum="10" /}
+</ul>
+</div><!--home_link end-->
+</div>
+</div>
+<div class="home_bottom">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<ul class="list-unstyled col-md-offset-4">
+<li><a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank">友情链接</a><span>|</span></li>
+<li><a href="{ZL:GetNodeLinkUrl(10)/}" target="_blank">关于论坛</a><span>|</span></li>
+<li><a href="{ZL:GetInfoUrl(3)/}" target="_blank">联系我们</a><span>|</span></li>
+<li><a href="{ZL:GetInfoUrl(4)/}" target="_blank">版权申明</a><span>|</span></li>
+<li><a href="{ZL:GetInfoUrl(5)/}" target="_blank">服务条款</a></li>
+</ul>
+</div>
+<div class="clearfix"></div>
+<div class="text-center">{$Copyright/}</div>
+</div>
+</div>
+<div class="home_code">
+<img src="{$CssDir/}images/pic9.jpg" alt=""/>
+<p class="text-center">扫一扫<br>加入我们这个大家庭</p>
+</div>
+</div>
+</body>
+</html>
+<script>
+
+$().ready(function(e) {
+    $(".item-list1").addClass("active");
+	$("#Age_sel").change(function(){
+		$("#MaxA").val($(this).find("option:selected").attr("max"));
+		$("#MinA").val($(this).find("option:selected").attr("min"));
+	})
+});
+//图片滚动
+var Speed = 3; //速度(毫秒)
+var Space = 7; //每次移动(px)
+var PageWidth = 400; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay(){ //自动滚动
+ clearInterval(AutoPlayObj);
+ AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
+}
+function ISL_GoUp(){ //上翻开始
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp(){ //上翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){
+  Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrUp(){ //上翻动作
+ if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth}
+ GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+ clearInterval(MoveTimeObj);
+ if(MoveLock) return;
+ clearInterval(AutoPlayObj);
+ MoveLock = true;
+ ISL_ScrDown();
+ MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+ clearInterval(MoveTimeObj);
+ if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){
+  Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+  CompScr();
+ }else{
+  MoveLock = false;
+ }
+ AutoPlay();
+}
+function ISL_ScrDown(){ //下翻动作
+ if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+ GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr(){
+ var num;
+ if(Comp == 0){MoveLock = false;return;}
+ if(Comp < 0){ //上翻
+  if(Comp < -Space){
+   Comp += Space;
+   num = Space;
+  }else{
+   num = -Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft -= num;
+  setTimeout('CompScr()',Speed);
+ }else{ //下翻
+  if(Comp > Space){
+   Comp -= Space;
+   num = Space;
+  }else{
+   num = Comp;
+   Comp = 0;
+  }
+  GetObj('ISL_Cont').scrollLeft += num;
+  setTimeout('CompScr()',Speed);
+ }
+}
+$().ready(function(e) {
+    $.ajax({
+		type: "Post",
+		url: "/Api/UserCheck.ashx",
+		data: {
+			action: "HasLogged"
+		},
+		success: function(data) {
+			if (data != -1 && data != "") {
+				var myinfo = JSON.parse(data);
+				$(".uname_li a").html(myinfo.UserName);
+			}
+		},
+		error: function(data){}
+	})
+});
+</script>

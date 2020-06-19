@@ -1,0 +1,70 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+.home_logo .navbar-default .navbar-nav > .home_ba3 > a{background:#fff;color:#719cc8;}
+</style>
+</head>
+<body class="body">
+{ZL.Label id="全站头部"/} 
+<div><img src="{$CssDir/}images/pic4.jpg" alt="{$SiteName/}"  class="img-responsive center-block"/></div>
+
+<div class="container">
+<div class="pcolumn">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 pcolumn_l">
+<ol class="breadcrumb" id="breadcrumb">
+<li>您的位置：<a href="/">首页</a>>></li>
+{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}>>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ol>
+<ul class="list-unstyled pcolumn_ul" id="pcolumn_ul">
+{ZL.Label id="输出子栏目文章标题_有分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="20" TitleNum="80" /}
+<div class="clearfix"></div>
+</ul>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pcolumn_r">
+<div class="pcolumn_r_recovery">
+<p class="pcolumn_r_recovery_p">精彩图片</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出推荐文章图片标题_无分页" NodeID="4" ShowNum="4" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+		
+
+$().ready(function(e) {
+    $(".item-list1").addClass("active");
+});
+</script>

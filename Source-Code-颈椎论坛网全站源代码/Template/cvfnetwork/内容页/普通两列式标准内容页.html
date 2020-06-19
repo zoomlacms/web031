@@ -1,0 +1,196 @@
+﻿{ZL.Source id="文章模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body class="body">
+{ZL.Label id="全站头部"/} 
+<div><img src="{$CssDir/}images/pic3.jpg" alt="{$SiteName/}"  class="img-responsive center-block"/></div>
+<!-- 通栏广告位 -->
+<div class="container myAnnoun">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 myAnnoun_l">
+<ol class="breadcrumb" id="breadcrumb">
+<li>您的位置：<a href="/">首页</a>>></li>
+<li><a href="{ZL:GetNodeUrl({SField sid="文章模型数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</a>>></li>
+<li>{ZL:CutText({SField sid="文章模型数据源标签" FD="Title" page="0"/},15,...)/}</li>
+</ol>
+<!--面包屑导航结束 -->
+<div class="myContent_l">
+<h1 class="text-center">{SField sid="文章模型数据源标签" FD="Title" page="0"/}</h1>
+<div class="myAbbr">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-md-offset-3 padding-right5 myAbbr_l">
+<span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="文章模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> 
+<span id="Hits">浏览次数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 padding0">
+<div class="bdsharebuttonbox">
+<a class="bds_more" href="#" data-cmd="more"></a>
+<a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
+<a title="分享到新浪微博" class="bds_tsina" href="#" data-cmd="tsina"></a>
+<a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq"></a>
+<a title="分享到人人网" class="bds_renren" href="#" data-cmd="renren"></a>
+<a title="分享到微信" class="bds_weixin" href="#" data-cmd="weixin"></a></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="myContent">{SField sid="文章模型数据源标签" FD="content"  page="0"/}</div>
+</div>
+<div class="edit">
+上一篇文章：{ZL.Label id="下一篇文章" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" TitleNum="100"/}<br>
+下一篇文章：{ZL.Label id="上一篇文章" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" TitleNum="100" /}
+</div>
+<div class="myAnnoun_pl">
+<div class="starlist">
+<ul class="nav nav-tabs">
+<span>文章评论</span>
+</ul>
+<div class="conment_pl">
+<ul class="list-unstyled">
+<div class="row">
+{ZL.Label id="输出最新文章审核评论列表" GeneralID="{SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}" ShowNum="4" SnyNum="300" /}
+</div>
+</ul>
+</div> 
+<ul class="list-inline">
+<li>非常不错：<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
+<li>很好：<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li> 
+<li>还可以吧：<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
+<li>不想看了：<i class="fa fa-star"></i><i class="fa fa-star"></i></li>
+<li>太垃圾了：<i class="fa fa-star"></i></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+<form name="form7" id="form7" method="post" action="/PubAction.aspx">
+<div class="row">
+<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 shop_conment_l">
+<img src="/images/userface/noface.gif" class="center-block img-responsive" alt="" />
+</div>
+<div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 shop_conment_r">
+<strong>对于这篇文章有什么要说的吗?<span class="myrating">
+<i class="fa fa-star" id="fa-star1" title="很差" onClick="starnum(1)"></i>
+<i class="fa fa-star" id="fa-star2" title="比较差" onClick="starnum(2)"></i>
+<i class="fa fa-star" id="fa-star3" title="一般" onClick="starnum(3)"></i>
+<i class="fa fa-star" id="fa-star4" title="满意" onClick="starnum(4)"></i>
+<i class="fa fa-star" id="fa-star5" title="很满意" onClick="starnum(5)"></i>
+</span></strong>
+<ul class="list-unstyled">
+<li class="hidden">
+<input name="PubTitle" type="text" id="PubTitle" value="{ZL:GetuserName()/} 对 ({SField sid="文章模型数据源标签" FD="Title" page="0"/}) 的评论">
+<input type="hidden" name="PubID" id="PubID" value="7">
+<input type="hidden" name="PubContentid" id="PubContentid" value="{SField sid="文章模型数据源标签" FD="ID" page="0"/}">
+<input type="hidden" name="score" id="score">
+</li>
+<li><textarea name="PubContent"  rows="4" id="PubContent" class="form-control"></textarea></li>
+<li class="pull-right">
+<input type="button" name="button2" id="button2" class="btn btn-primary" value="发 表" onClick="getshop()">
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+</form>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pcolumn_r">
+<div class="pcolumn_r_recovery">
+<p class="pcolumn_r_recovery_p">康复视频</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出父栏目推荐视频图片标题_无分页" NodeID="9" ShowNum="2" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+<div class="pcolumn_r_recovery">
+<p class="pcolumn_r_recovery_p">精彩图片</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出推荐文章图片标题_无分页" NodeID="4" ShowNum="2" TitleNum="30" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+<div class="pcolumn_r_recovery" id="pcolumn_r_cp">
+<p class="pcolumn_r_recovery_p">推荐产品</p>
+<uL class="list-unstyled">
+{ZL.Label id="输出商城产品标题" NodeID="6" ShowNum="11" TitleNum="32" /}
+</uL>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<!--主体结束 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//分享按钮
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)]
+;
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+		
+
+$().ready(function(e) {
+    $(".item-list1").addClass("active");
+});
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+//商品星级评论
+function starnum(obj){
+	$(".myrating").find(".fa").css("color",'#ccc');
+	for( var i=1; i<=obj; i++){		 
+		$("#fa-star"+i).css("color",'#ffd200');
+		pubscore=i;
+	}		
+}
+function getshop(){
+ 	$("#score").val(pubscore);
+	$("#form7").submit();	
+}
+
+$(".grade0").append('该用户没有评分!');
+    $(".grade1").append('<i class="fa fa-star"></i>');
+	$(".grade2").append('<i class="fa fa-star"></i><i class="fa fa-star"></i>')
+	$(".grade3").append('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>')
+	$(".grade4").append('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>')
+	$(".grade5").append('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+	$(".score1").append('<i class="fa fa-star-half"></i>');
+	$(".score2").append('<i class="fa fa-star"></i>');
+	$(".score3").append('<i class="fa fa-star"></i><i class="fa fa-star-half"></i>');
+	$(".score4").append('<i class="fa fa-star"></i><i class="fa fa-star"></i>');
+	$(".score5").append('<i class="fa fa-star"><i class="fa fa-star"></i><i class="fa fa-star-half"></i>');
+	$(".score6").append('<i class="fa fa-star"></i></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+	$(".score7").append('<i class="fa fa-star"></i></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>');
+	$(".score8").append('<i class="fa fa-star"></i></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+	$(".score9").append('<i class="fa fa-star"></i></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>');
+	$(".score10").append('<i class="fa fa-star"></i></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+</script>

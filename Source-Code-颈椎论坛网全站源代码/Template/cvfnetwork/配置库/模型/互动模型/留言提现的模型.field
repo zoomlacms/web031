@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <FieldID>1446</FieldID>
+    <IsView>true</IsView>
+    <ModelID>31</ModelID>
+    <FieldName>xm</FieldName>
+    <FieldAlias>姓名</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>true</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=text,DefaultValue=</Content>
+    <OrderID>1</OrderID>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <Sys_type>false</Sys_type>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1447</FieldID>
+    <IsView>True</IsView>
+    <ModelID>31</ModelID>
+    <FieldName>sjhm</FieldName>
+    <FieldAlias>手机号码</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>True</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=text,DefaultValue=</Content>
+    <OrderID>2</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+</NewDataSet>
